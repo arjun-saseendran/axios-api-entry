@@ -1,7 +1,7 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Header() {
   return (
@@ -15,7 +15,6 @@ function Header() {
             <Nav.Link href="#link">Account</Nav.Link>
             <Nav.Link href="#link">Cart</Nav.Link>
             <Nav.Link href="#link">Orders</Nav.Link>
-            
           </Nav>
         </Navbar.Collapse>
       </Container>
