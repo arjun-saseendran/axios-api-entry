@@ -4,6 +4,7 @@ import Header from "./header/Header";
 import Cards from "./Cards";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Footer } from "./footer/Footer";
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -17,11 +18,12 @@ function App() {
   return (
     <>
       <Header />
-      <Container className="mt-5">
+      <Container className="mt-5 mb-5">
         <Row>
           <Cards product={product} />
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 }
