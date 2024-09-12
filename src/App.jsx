@@ -23,7 +23,7 @@ function App() {
           <Cards product={product} />
         </Row>
       </Container>
-      <Footer/>
+      <Footer />
     </>
   );
 }
