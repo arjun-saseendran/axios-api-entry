@@ -1,10 +1,10 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Header from "./header/Header";
-import Cards from "./Cards";
+import Header from "./components/header/Header";
+import Cards from "./components/cards/Cards";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Footer } from "./footer/Footer";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   const [product, setProduct] = useState([]);
