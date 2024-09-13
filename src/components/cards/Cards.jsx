@@ -1,12 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-
+import Product from "../product/Product";
 
 function Cards({ product }) {
-
-  
-  
   return (
     <>
       {product.map((product) => (
@@ -25,15 +22,15 @@ function Cards({ product }) {
                 {product.description}
               </Card.Text>
               <Card.Link href={`/product/${product.id}`} className="text-white">
-              <Button
-                className="text-white"
-                variant="dark"
-                style={{ background: "#603F26" }}
-              >
-                Add to cart
-              </Button>
+                <Button
+                  onClick={() => <Product product={product} />}
+                  className="text-white"
+                  variant="dark"
+                  style={{ background: "#603F26" }}
+                >
+                  Add to cart
+                </Button>
               </Card.Link>
-              
             </Card.Body>
           </Card>
         </Col>
