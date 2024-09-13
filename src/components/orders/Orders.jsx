@@ -1,8 +1,15 @@
 import React from 'react'
+import Header from '../header/Header'
+import { Footer } from '../footer/Footer'
 
 const Orders = () => {
   return (
-    <div>Orders</div>
+    <>
+    <Header/>
+    Orders
+    <Footer/>
+    </>
+    
   )
 }
 

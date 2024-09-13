@@ -1,7 +1,15 @@
 import React from 'react'
+import Header from '../header/Header'
+import { Footer } from '../footer/Footer'
 
-export const Account = () => {
+const Account = () => {
   return (
-    <div>Account</div>
+    <>
+    <Header/>
+    Account
+    <Footer/>
+    </>
   )
 }
+
+export default Account
