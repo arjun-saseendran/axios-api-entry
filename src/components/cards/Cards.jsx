@@ -2,11 +2,15 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 
+
 function Cards({ product }) {
+
+  
+  
   return (
     <>
-      {product.map((product, index) => (
-        <Col xs={6} md={4} lg={3} key={index} className="p-2 mb-2">
+      {product.map((product) => (
+        <Col xs={6} md={4} lg={3} key={product.id} className="p-2 mb-2">
           <Card style={{ background: "#FFF8E8" }}>
             <Card.Img
               style={{ height: "200px", objectFit: "contain", padding: "10px" }}
@@ -20,6 +24,7 @@ function Cards({ product }) {
               <Card.Text style={{ maxHeight: "78px", overflow: "hidden" }}>
                 {product.description}
               </Card.Text>
+              <Card.Link href={`/product/${product.id}`} className="text-white">
               <Button
                 className="text-white"
                 variant="dark"
@@ -27,6 +32,8 @@ function Cards({ product }) {
               >
                 Add to cart
               </Button>
+              </Card.Link>
+              
             </Card.Body>
           </Card>
         </Col>
