@@ -26,6 +26,15 @@ function Cards({ product }) {
                 <Button
                   className="text-white"
                   variant="dark"
+                  style={{ background: "#603F26", marginRight: "10px" }}
+                >
+                  View product
+                </Button>
+              </Link>
+              <Link to={"/cart"} className="text-white">
+                <Button
+                  className="text-white"
+                  variant="dark"
                   style={{ background: "#603F26" }}
                 >
                   Add to cart
