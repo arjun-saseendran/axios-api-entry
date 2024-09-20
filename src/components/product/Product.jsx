@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../header/Header";
-import { Footer } from "../footer/Footer";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Row } from "react-bootstrap";
@@ -20,7 +18,6 @@ const Product = () => {
 
   return (
     <>
-      <Header />
       <Row>
         <Card style={{ background: "#FFF8E8" }}>
           <Card.Img
@@ -38,7 +35,6 @@ const Product = () => {
           </Card.Body>
         </Card>
       </Row>
-      <Footer />
     </>
   );
 };

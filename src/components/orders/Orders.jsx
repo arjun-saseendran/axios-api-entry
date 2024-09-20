@@ -1,16 +1,7 @@
-import React from 'react'
-import Header from '../header/Header'
-import { Footer } from '../footer/Footer'
+import React from "react";
 
 const Orders = () => {
-  return (
-    <>
-    <Header/>
-    Orders
-    <Footer/>
-    </>
-    
-  )
-}
+  return <>Orders</>;
+};
 
-export default Orders
+export default Orders;

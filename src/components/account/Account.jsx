@@ -1,15 +1,7 @@
-import React from 'react'
-import Header from '../header/Header'
-import { Footer } from '../footer/Footer'
+import React from "react";
 
 const Account = () => {
-  return (
-    <>
-    <Header/>
-    Account
-    <Footer/>
-    </>
-  )
-}
+  return <>Account</>;
+};
 
-export default Account
+export default Account;
