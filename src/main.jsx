@@ -8,7 +8,7 @@ import Account from "./components/account/Account.jsx";
 import Cart from "./components/cart/Cart.jsx";
 import Orders from "./components/orders/Orders.jsx";
 import Product from "./components/product/Product.jsx";
-import Root from "./routes/root.jsx";
+import Root from "./routes/Root.jsx";
 
 const router = createBrowserRouter([
   {

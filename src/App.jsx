@@ -6,6 +6,7 @@ import axios from "axios";
 
 function App() {
   const [product, setProduct] = useState([]);
+
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
