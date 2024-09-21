@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import Container from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
 const Product = () => {
   const { product_id } = useParams();
