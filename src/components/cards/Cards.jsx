@@ -1,10 +1,16 @@
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-import Product from "../product/Product";
 import { Link } from "react-router-dom";
 
 function Cards({ product }) {
+  const [cart, setCart] = useState([]);
+
+  function addTocart(product) {
+    setCart([...cart, product]);
+  }
+
   return (
     <>
       {product.map((product) => (
@@ -31,15 +37,15 @@ function Cards({ product }) {
                   View product
                 </Button>
               </Link>
-              <Link to={"/cart"} className="text-white">
-                <Button
-                  className="text-white"
-                  variant="dark"
-                  style={{ background: "#603F26" }}
-                >
-                  Add to cart
-                </Button>
-              </Link>
+
+              <Button
+                className="text-white"
+                variant="dark"
+                style={{ background: "#603F26" }}
+                onClick={() => addTocart(product)}
+              >
+                Add to cart
+              </Button>
             </Card.Body>
           </Card>
         </Col>
