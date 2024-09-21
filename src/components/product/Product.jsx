@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { Row } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Container from "react-bootstrap";
