@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 function Cart() {
   const cart = useSelector((state) => state.cart.cart);
 
-  console.log(cart);
-
   return (
     <>
       <h1 className="text-center m-5">Cart</h1>
