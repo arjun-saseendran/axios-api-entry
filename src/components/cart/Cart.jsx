@@ -1,10 +1,10 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
-import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-function Cart(product) {
-  console.log(product);
+function Cart() {
+  const cart = useSelector((state) => state.cart.cart);
+
+  console.log(cart);
 
   return (
     <>
@@ -21,16 +21,26 @@ function Cart(product) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>{product.title}</td>
-            <td>
-              <img src={product.image} style={{ height: "50px" }} />
-            </td>
-            <td>{product.description}</td>
-            <td>{product.price}</td>
-            <td>delete</td>
-          </tr>
+          {cart.length > 0 ? (
+            cart.map((product) => {
+              return (
+                <tr key={product.id}>
+                  <td>1</td>
+                  <td>{product.title}</td>
+                  <td>
+                    <img src={product.image} style={{ height: "50px" }} />
+                  </td>
+                  <td>{product.description}</td>
+                  <td>{product.price}</td>
+                  <td>delete</td>
+                </tr>
+              );
+            })
+          ) : (
+            <tr>
+              <td>Cart is empty</td>
+            </tr>
+          )}
         </tbody>
       </Table>
     </>

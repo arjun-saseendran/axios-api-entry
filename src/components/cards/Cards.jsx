@@ -1,18 +1,12 @@
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
-import Cart from "../cart/Cart";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/cart/cartSlice";
 
 function Cards({ product }) {
-  const [cart, setCart] = useState([]);
-
-  function addTocart(product) {
-    setCart([...cart, product]);
-
-    Cart(cart);
-  }
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -45,7 +39,7 @@ function Cards({ product }) {
                 className="text-white"
                 variant="dark"
                 style={{ background: "#603F26" }}
-                onClick={() => addTocart(product)}
+                onClick={() => dispatch(addToCart(product))}
               >
                 Add to cart
               </Button>
