@@ -8,7 +8,7 @@ import Account from "./components/account/Account.jsx";
 import Cart from "./components/cart/Cart.jsx";
 import Orders from "./components/orders/Orders.jsx";
 import Product from "./components/product/Product.jsx";
-import Root from "./routes/Root.jsx";
+import Root from "../src/routes/root.jsx";
 import store from "./app/store.js";
 import { Provider } from "react-redux";
 
