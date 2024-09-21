@@ -3,15 +3,8 @@ import { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { useParams } from "react-router-dom";
 
-function Cart() {
-  const { product_id } = useParams();
-  const [product, setProduct] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(`https://fakestoreapi.com/products/${product_id}`)
-      .then((response) => setProduct(...product, response.data));
-  }, []);
+function Cart(product) {
+  console.log(product);
 
   return (
     <>
