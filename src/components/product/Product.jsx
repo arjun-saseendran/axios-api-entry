@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import { Row } from "react-bootstrap";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import Container from "react-bootstrap";
 
 const Product = () => {
   const { product_id } = useParams();
@@ -17,7 +18,7 @@ const Product = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       <Row>
         <Card style={{ background: "#FFF8E8" }}>
           <Card.Img
@@ -35,7 +36,7 @@ const Product = () => {
           </Card.Body>
         </Card>
       </Row>
-    </>
+    </Container>
   );
 };
 
