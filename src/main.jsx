@@ -9,6 +9,8 @@ import Cart from "./components/cart/Cart.jsx";
 import Orders from "./components/orders/Orders.jsx";
 import Product from "./components/product/Product.jsx";
 import Root from "./routes/Root.jsx";
+import store from "./app/store.js";
+import { Provider } from "react-redux";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +43,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>
 );
